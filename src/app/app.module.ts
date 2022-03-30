@@ -1,16 +1,18 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { TvShowComponent } from "./tvshow.component";
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
+import { StarComponent } from "./shared/star.component";
 
-import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    imports: [BrowserModule, HttpClientModule, FormsModule],
+    declarations: [TvShowComponent, StarComponent],
+    bootstrap:[TvShowComponent]
 })
-export class AppModule { }
+
+
+export class AppModule{
+
+}
